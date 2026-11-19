@@ -1,0 +1,82 @@
+{
+  "title": "World in Brief",
+  "date": "19 NOVEMBER 2026",
+  "edition": "EARLY EDITION",
+  "as_of_utc": "2026-11-19T04:00:00Z",
+  "language": "en",
+  "coverage_note": "A verified morning snapshot, not a claim that the whole news day has finished.",
+  "stories": [
+    {
+      "id": "apec",
+      "number": "01",
+      "category": "DIPLOMACY",
+      "location": "SHENZHEN",
+      "headline": ["TRUMP, XI", "& PUTIN", "AT APEC"],
+      "deck": ["Leaders appear together", "in the summit group photo."],
+      "verified_claim": "Trump, Xi and Putin appeared in the APEC leaders' group photo in Shenzhen on the morning of 19 November, China time.",
+      "not_claimed": "No trilateral outcome, agreement, completed meeting or future event is asserted.",
+      "date_basis": "Event on 19 November in Shenzhen, UTC+08:00; Reuters and independent video reporting appeared before the edition cutoff.",
+      "source_ids": [4, 14, 15]
+    },
+    {
+      "id": "crimea",
+      "number": "02",
+      "category": "RUSSIA–UKRAINE",
+      "location": "CRIMEAN BRIDGE",
+      "headline": ["CRIMEAN BRIDGE", "CLOSURE REPORTED"],
+      "deck": ["Russian-installed governor", "reports a temporary closure."],
+      "verified_claim": "Crimea's Russian-installed governor announced a temporary suspension of bridge traffic after an attack; the report remains attributed to that official.",
+      "not_claimed": "No independently confirmed perpetrator, new damage assessment or current reopening status is asserted.",
+      "date_basis": "Announcement at 01:35 UTC+03:00 on 19 November; also 00:35 in Kyiv. The UTC date was still 18 November.",
+      "source_ids": [8, 18, 19]
+    },
+    {
+      "id": "akvan",
+      "number": "03",
+      "category": "BAY OF BENGAL",
+      "location": "INDIA",
+      "headline": ["CYCLONE AKVAN", "NEARS INDIA"],
+      "deck": ["IMD warns coastal states;", "landfall forecast for 20 Nov."],
+      "verified_claim": "India's weather agency tracked severe cyclonic storm Akvan northward in the Bay of Bengal in a 19 November observation and warned parts of the coast.",
+      "not_claimed": "Landfall is explicitly a forecast, not an event that has already happened; no casualty or damage total is given.",
+      "date_basis": "IMD observation at 02:30 IST and national bulletin issued at 05:30 IST on 19 November.",
+      "source_ids": [28, 29, 30]
+    },
+    {
+      "id": "australia",
+      "number": "04",
+      "category": "JOBS DATA",
+      "headline": ["4.9%"],
+      "label": "AUSTRALIA JOBLESS RATE",
+      "deck": ["October · released today"],
+      "verified_claim": "The ABS released the seasonally adjusted October unemployment rate of 4.9% on 19 November at 11:30 AEDT.",
+      "not_claimed": "The rate describes October data, not one day's layoffs; seasonally adjusted and trend rates are not mixed.",
+      "date_basis": "New official statistical release on 19 November at 11:30 AEDT, or 00:30 UTC.",
+      "source_ids": [24, 25, 26, 27]
+    },
+    {
+      "id": "gta",
+      "number": "05",
+      "category": "CULTURE",
+      "headline": ["GTA VI"],
+      "label": "ROLLOUT BEGINS",
+      "deck": ["Digital, region by region"],
+      "verified_claim": "Regional digital access to Grand Theft Auto VI began at local midnight on 19 November, including New Zealand and India.",
+      "not_claimed": "No claim is made that launch has finished worldwide, or that an exact sales or revenue total is confirmed.",
+      "date_basis": "Observed access in New Zealand and India at local midnight on 19 November, supported by reporting beyond the previously announced schedule.",
+      "source_ids": [32, 33, 34]
+    },
+    {
+      "id": "kumamoto",
+      "number": "06",
+      "category": "JAPAN",
+      "headline": ["M5.7"],
+      "label": "KUMAMOTO QUAKE",
+      "deck": ["Preliminary · 02:22 JST"],
+      "verified_claim": "JMA recorded a new Kumamoto earthquake at 02:22 JST on 19 November with a preliminary magnitude of 5.7.",
+      "not_claimed": "Magnitude is not confused with the separate Japanese intensity scale. No unverified casualty or damage count is asserted.",
+      "date_basis": "New earthquake at 02:22 JST on 19 November, or 17:22 UTC on 18 November; the July earthquake in the same sequence is background, not today's event.",
+      "source_ids": [20, 21, 23]
+    }
+  ]
+}
