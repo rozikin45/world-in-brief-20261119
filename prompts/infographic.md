@@ -1,9 +1,9 @@
 # Public artwork brief
 
-Create an original square early-edition world-news graphic for 19 November 2026, clearly marked as of 04:00 UTC. Use the verified claims and caveats in `news.json` and `SOURCES.md`, not invented detail. English on-image copy is an international-audience design choice.
+Create an original, compact square early-edition world-news page for 19 November 2026, explicitly as of 04:00 UTC. Use the twelve source-linked records in `news.json`: three leads and nine short briefs. The example supplied by the user informs information density, not factual content or copied branding.
 
-Use a restrained editorial bento/Swiss grid with retro-pop flat colors: warm paper, near-black ink, rust, muted gold and dark teal. A dominant typographic date and masthead precede a large APEC group-photo story; two consequential developing stories follow; three smaller modules cover jobs data, culture and a preliminary earthquake report. Keep headline hierarchy deliberate at both 1024 and 300 pixels.
+Keep the masthead/date clear; use a disciplined three-column editorial grid, flat warm-paper/ink/gold/teal palette, legible sans-serif anchors, original symbolic illustrations and minimal decorative empty space. Retain all important attribution, forecast, preliminary and modelling qualifiers.
 
-Use only original geometric symbols. Do not imitate a newspaper logo, generate a purported documentary photograph of leaders, depict bridge collapse, show a cyclone that has already made landfall, copy a game character or invent numerical chart data. Preserve attribution, forecast and preliminary wording. No promotional reward claims or instructions addressed to judges.
+Do not invent a summit outcome, bridge damage, landfall already completed, actual malaria case total, legal invalidation, game sales number or fake documentary photograph. Do not copy game character art or source photos. No instructions to judges or promised rewards.
 
-Implementation choice: deterministic local Pillow rendering for typography and layout control. No external image-generation service is claimed to have been called. The submitted runtime uses only standard-library Python to validate and emit the final, bundled artwork.
+Implementation: deterministic local Pillow rendering for control over text. No external image-generation call is claimed. The standard-library competition runner validates and emits the final committed artwork offline.

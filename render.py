@@ -94,20 +94,16 @@ class Poster:
             self.text(value, x, y + leading * index, size, **kwargs)
 
     def group_photo_symbol(self):
-        """A symbolic viewfinder and figures, not a generated news photograph."""
-        left, top, right, bottom = 600, 263, 943, 440
-        self.rect((left, top, right, bottom), fill=PAPER, outline=INK, width=4)
+        """Symbolic viewfinder and labelled figures, not a documentary photo."""
+        self.rect((600, 233, 943, 396), fill=PAPER, outline=INK, width=4)
         for center, name in [(657, "TRUMP"), (771, "XI"), (885, "PUTIN")]:
-            self.ellipse((center - 22, 288, center + 22, 332), fill=INK)
-            self.polygon([(center - 34, 350), (center - 15, 339),
-                          (center + 15, 339), (center + 34, 350),
-                          (center + 38, 389), (center - 38, 389)], fill=INK)
-            self.rect((center - 15, 338, center + 15, 344), fill=INK)
-            self.text(name, center, 405, 18, kind="bold", anchor="mt",
+            self.ellipse((center - 22, 257, center + 22, 301), fill=INK)
+            self.polygon([(center - 34, 319), (center - 15, 308),
+                          (center + 15, 308), (center + 34, 319),
+                          (center + 38, 358), (center - 38, 358)], fill=INK)
+            self.text(name, center, 373, 18, kind="bold", anchor="mt",
                       width=104)
-        self.rect((613, 277, 624, 285), fill=RED)
-        self.text("THE APEC GROUP PHOTO", 772, 460, 17, kind="bold",
-                  anchor="mt", width=345)
+        self.rect((613, 247, 624, 255), fill=RED)
 
     def bridge_symbol(self, x=414, y=545):
         """Intact bridge plus stop sign: no assertion of new physical damage."""
@@ -133,8 +129,7 @@ class Poster:
             self.line(points, fill=WHITE, width=4)
         self.ellipse((cx - 4, cy - 4, cx + 4, cy + 4), fill=WHITE)
 
-    def gamepad_symbol(self):
-        x, y = 602, 849
+    def gamepad_symbol(self, x=900, y=813):
         self.polygon([(x + 7, y), (x + 37, y), (x + 48, y + 8),
                       (x + 55, y + 30), (x + 45, y + 35),
                       (x + 32, y + 22), (x + 17, y + 22),
@@ -147,87 +142,75 @@ class Poster:
 
     def draw_all(self, document):
         stories = {s["id"]: s for s in document["stories"]}
-        assert len(stories) == 6
+        assert len(stories) == 5
 
-        # Masthead: one typographic anchor, date visually inseparable from it.
-        self.text("THE DAY, AT A GLANCE", 35, 27, 17, kind="bold", width=600)
-        self.text("WORLD IN BRIEF", 33, 65, 74, kind="display",
-                  width=775, floor=69, role="primary")
-        self.text("EARLY EDITION  /  AS OF 04:00 UTC", 36, 159, 19,
-                  kind="bold", width=745)
-        self.rect((835, 27, 989, 180), fill=INK)
-        self.text("19", 912, 37, 85, kind="display", fill=PAPER,
+        # Larger sans-serif anchors replace the denser six-story first draft.
+        self.text("19 NOV 2026  /  04:00 UTC", 35, 27, 30, kind="bold",
+                  width=775, role="primary")
+        self.text("WORLD IN BRIEF", 33, 76, 68, kind="bold",
+                  width=775, floor=64, role="primary")
+        self.text("EARLY EDITION", 36, 151, 27,
+                  kind="bold", width=775)
+        self.rect((835, 27, 989, 175), fill=INK)
+        self.text("19", 912, 37, 79, kind="display", fill=PAPER,
                   anchor="mt", role="primary")
-        self.text("NOV 2026", 912, 138, 23, kind="bold", fill=PAPER,
+        self.text("NOV 2026", 912, 132, 23, kind="bold", fill=PAPER,
                   anchor="mt", role="primary")
-        self.line([(34, 194), (989, 194)], width=5)
 
-        # Main story occupies a broad, deliberate panel rather than equal cards.
-        self.rect((34, 212, 989, 506), fill=HERO, outline=INK, width=4)
-        self.text("01 / DIPLOMACY · SHENZHEN", 54, 231, 18,
+        self.rect((34, 190, 989, 422), fill=HERO, outline=INK, width=4)
+        self.text("01 / DIPLOMACY · SHENZHEN", 54, 207, 18,
                   kind="bold", width=520)
-        self.lines(stories["apec"]["headline"], 53, 264, 48, 55,
-                   kind="display", width=510, floor=46, role="primary")
-        self.lines(stories["apec"]["deck"], 55, 442, 22, 27,
-                   width=510)
+        self.text(stories["apec"]["headline"][0], 53, 249, 47,
+                  kind="bold", width=520, floor=44, role="primary")
+        self.text(stories["apec"]["headline"][1], 51, 306, 75,
+                  kind="bold", width=520, floor=70, role="primary")
+        self.text("Leaders' group photo in Shenzhen", 55, 390, 23,
+                  width=520)
         self.group_photo_symbol()
 
-        # Two consequential developing stories; qualification is kept on-image.
-        self.rect((34, 528, 989, 766), fill=PAPER, outline=INK, width=4)
-        self.rect((514, 530, 987, 764), fill=TEAL)
-        self.line([(512, 528), (512, 766)], width=4)
-        self.text("02 / RUSSIA–UKRAINE", 54, 547, 16,
-                  kind="bold", width=350)
-        self.bridge_symbol()
-        self.lines(stories["crimea"]["headline"], 53, 591, 35, 43,
-                   kind="display", width=432, floor=33, role="primary")
-        self.lines(stories["crimea"]["deck"], 55, 696, 20, 27,
-                   width=432)
-        self.text("03 / BAY OF BENGAL", 534, 547, 16,
+        self.rect((34, 444, 989, 697), fill=PAPER, outline=INK, width=4)
+        self.rect((514, 446, 987, 695), fill=TEAL)
+        self.line([(512, 444), (512, 697)], width=4)
+        self.text("02 / RUSSIA–UKRAINE", 54, 463, 18,
+                  kind="bold", width=355)
+        self.bridge_symbol(x=414, y=457)
+        self.lines(stories["crimea"]["headline"], 53, 508, 43, 51,
+                   kind="bold", width=432, floor=39, role="primary")
+        self.lines(stories["crimea"]["deck"], 55, 620, 25, 33,
+                   width=432, floor=24)
+        self.text("03 / BAY OF BENGAL", 534, 463, 18,
                   kind="bold", fill=WHITE, width=345)
-        self.cyclone_symbol()
-        self.lines(stories["akvan"]["headline"], 533, 591, 36, 43,
-                   kind="display", fill=WHITE, width=430, floor=34,
+        self.cyclone_symbol(center=(934, 475))
+        self.lines(stories["akvan"]["headline"], 533, 508, 43, 51,
+                   kind="bold", fill=WHITE, width=430, floor=39,
                    role="primary")
-        self.lines(stories["akvan"]["deck"], 535, 696, 20, 27,
-                   fill=WHITE, width=425)
+        self.lines(stories["akvan"]["deck"], 535, 620, 25, 33,
+                   fill=WHITE, width=425, floor=24)
 
-        # Three smaller, materially different fields: jobs, culture, earthquake.
-        self.rect((34, 788, 989, 959), fill=PAPER, outline=INK, width=4)
-        self.line([(353, 788), (353, 959)], width=4)
-        self.line([(671, 788), (671, 959)], width=4)
-        self.text("04 / AUSTRALIA", 53, 806, 25, kind="display",
-                  width=281, role="primary")
-        self.text("4.9%", 51, 842, 57, kind="display", width=281,
-                  role="primary")
-        self.text("JOBLESS RATE", 54, 906, 24, kind="bold", width=281,
-                  role="primary")
-        self.text("OCTOBER · RELEASED TODAY", 54, 938, 15, kind="bold",
-                  width=281)
+        self.rect((34, 719, 989, 963), fill=PAPER, outline=INK, width=4)
+        self.line([(512, 719), (512, 963)], width=4)
+        self.text("04 / AUSTRALIA", 53, 741, 36, kind="bold",
+                  width=432, role="primary")
+        self.text(stories["australia"]["headline"][0], 51, 790, 88,
+                  kind="display", width=432, role="primary")
+        self.text("JOBLESS · OCTOBER", 54, 891, 31, kind="bold",
+                  width=432, role="primary")
+        self.text("NEW ABS RELEASE", 55, 936, 20, kind="bold", width=432)
 
-        self.text("05 / CULTURE", 373, 806, 25, kind="display",
-                  width=277, role="primary")
-        self.text("GTA VI", 371, 845, 44, kind="display", width=218,
-                  role="primary")
+        self.text("05 / CULTURE", 534, 741, 29, kind="bold",
+                  width=430, role="primary")
+        self.text(stories["gta"]["headline"][0], 531, 795, 65,
+                  kind="bold", width=350, role="primary")
         self.gamepad_symbol()
-        self.text("ROLLOUT BEGINS", 373, 906, 25, kind="bold", width=277,
-                  floor=24, role="primary")
-        self.text("DIGITAL · REGION BY REGION", 373, 938, 14,
-                  kind="bold", width=277)
+        self.text(stories["gta"]["label"], 534, 881, 35, kind="bold",
+                  width=430, floor=33, role="primary")
+        self.text("DIGITAL · REGION BY REGION", 535, 932, 26,
+                  kind="bold", width=430, floor=25)
 
-        self.text("06 / JAPAN QUAKE", 691, 806, 25, kind="display",
-                  width=279, floor=24, role="primary")
-        self.text("M5.7", 689, 843, 54, kind="display", width=279,
-                  role="primary")
-        self.text("KUMAMOTO", 691, 906, 25, kind="bold", width=279,
-                  role="primary")
-        self.text("PRELIMINARY · 02:22 JST", 691, 938, 15,
-                  kind="bold", width=279)
-
-        self.text("REUTERS  /  CNBC  /  JMA  /  ABS  /  IMD  /  AP", 35, 981,
-                  14, kind="bold", width=710)
-        self.text("SIX DEVELOPMENTS. REPORTING CONTINUES.", 989, 1008,
-                  12, kind="bold", anchor="rt", width=750, fill=MUTED)
+        self.text("REUTERS  /  CNBC  /  ABS  /  IMD  /  AP", 35, 981,
+                  15, kind="bold", width=810)
+        self.text("FIVE DEVELOPMENTS. REPORTING CONTINUES.", 989, 1006,
+                  13, kind="bold", anchor="rt", width=900, fill=MUTED)
 
     def save(self):
         final = self.image.resize((SIZE, SIZE), Image.Resampling.LANCZOS)

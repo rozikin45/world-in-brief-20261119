@@ -3,3 +3,5 @@ __pycache__/
 out/
 .output-test/
 .DS_Store
+*.layout.json
+/design/layout-audit.json

@@ -1,38 +1,19 @@
----
-title: World in Brief — 19 November 2026
-topic: public-interest world news
-data_type: overview with explicit editorial hierarchy
-complexity: moderate
-point_count: 6
-source_language: English and Japanese
-user_language: Indonesian
-artwork_language: English
----
+# Final editorial design
 
-# Design and editorial analysis
+Twelve source-linked stories, three leads and nine briefs, at the explicitly printed 19 November 2026 / 04:00 UTC cutoff. English is the on-image language for the international brief. This is an early edition, not full-day coverage.
 
-## Main topic and viewer goals
+## Hierarchy
 
-A six-story early edition, explicitly frozen at 04:00 UTC on 19 November 2026. The viewer should identify the date, understand the main developments, and distinguish an attributed report, a forecast and a preliminary measurement from an established final outcome. This is a Monitor surface, not a marketing landing page.
+A compact masthead/date precedes three lead panels: APEC, Akvan and GTA VI. Nine briefs occupy a three-column, three-row lower grid. The user requested greater density after the original five/six-story draft, so decorative space was reduced rather than filling the page with unverified stories.
 
-## Source data integrity
+The final pairing is a dense editorial module grid with restrained retro-pop/Swiss typography: warm paper, near-black ink, a muted-gold lead and a dark-teal weather panel. Noto Sans carries the compact headline and body system; Noto Serif Display is retained for the large date. No gradients, copied publication logo, purported documentary photo or fake numeric chart is used.
 
-The canonical claim and caveat records are in `../news.json`; exact source attribution and date reasoning are in `../SOURCES.md`. Critical strings retained without rounding: 4.9%, M5.7, 02:22 JST, October, 20 Nov (forecast), 19 NOV 2026 and 04:00 UTC. No summit agreement, bridge damage count, cyclone casualty number or global-completion claim was invented.
+## Integrity
 
-## Combinations considered
+`news.json` is the canonical selection and display-copy record. `SOURCES.md` documents 23 reference URLs, first-report/event dates, attribution and limitations. Conditional, forecast, preliminary, hypothetical and non-revocation qualifiers remain on the image. The photo icon is symbolic; the gamepad is generic; the cyclone icon is not a forecast track.
 
-1. Editorial bento + bold graphic: strong hierarchy, but exaggerated comic effects would be inappropriate for war and severe weather.
-2. **Editorial bento + retro-pop-grid — selected:** a restrained Swiss grid, warm newsprint, flat color, black rules and original symbols. The serious editorial tone takes precedence over decorative pop-art effects.
-3. Dense modules + pop-laboratory: rejected as the default because small text and more equal-sized boxes would impair the requested small-view readability.
+## QA actually performed
 
-## Actual system
+The six-item first draft produced poor 300-pixel OCR, prompting larger sans-serif anchors. The final denser structure follows the user’s subsequent preference for more stories. Measured text regions and canvas bounds are checked by the renderer. Runtime tests exercise repeated byte-identical outputs with third-party site packages disabled and reject corrupt PNG data. Layout tests cover twelve non-overlapping slots and block incomplete/provisional publication.
 
-- Canvas: 1024 × 1024, RGB PNG; 2× supersampled development render.
-- Palette: warm paper #F5F0E6, ink #151A1B, rust #B93F31, muted gold #E2BD71, dark teal #285E5A.
-- Noto Serif Display SemiCondensed ExtraBold for the masthead and news anchors; Noto Sans for supporting text. Font assets and their license are bundled.
-- One full-width lead, two middle stories, three short supporting stories. No rounded SaaS cards, gradients, 3D rendering or copied publication branding.
-- Generic figures inside a photo viewfinder represent the APEC group photo; an intact bridge with a stop symbol avoids depicting unverified destruction. The cyclone is a symbol, not a fabricated track chart. The gamepad is generic, not game character art.
-
-## Quality gates
-
-`layout-audit.json` contains the measured text bounding boxes and chosen font sizes. The renderer fails when text cannot fit its assigned width or leaves the canvas. `preview-300.png` is a real downscale, not a separately redrawn thumbnail. Independent visual review was requested; this document does not claim a review result before it is actually received.
+Automated pixel-review helpers could not access the images, so no visual-review pass is claimed. Actual OCR outputs and detailed generated geometry reports are retained privately/ignored rather than inflated into public source code. The news content is a synthesis, not a claim of eyewitness reporting.

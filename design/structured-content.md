@@ -1,14 +1,18 @@
-# Structured composition
+# Final structured composition
 
-`../news.json` is the canonical, source-linked editorial record. The renderer uses its story headline and deck fields; the displayed edition cutoff is 19 November 2026, 04:00 UTC.
+Canonical content: `../news.json`. Three leads, nine briefs; cutoff 19 November 2026 / 04:00 UTC.
 
-| Order | Story key | Visual priority | Intended symbol | Essential qualifier |
-|---|---|---|---|---|
-| 01 | apec | full-width lead | symbolic group-photo viewfinder | photo, not an asserted agreement |
-| 02 | crimea | middle-left | intact bridge + stop marker | closure reported by an official |
-| 03 | akvan | middle-right, inverted teal | cyclone symbol | future landfall is a forecast |
-| 04 | australia | lower-left | 4.9% typographic datum | October data, released today |
-| 05 | gta | lower-middle | generic gamepad | regional digital rollout |
-| 06 | kumamoto | lower-right | M5.7 typographic datum | preliminary; 02:22 JST |
+- 01 · Lead · `apec` · TRUMP · XI · PUTIN AT APEC
+- 02 · Lead · `akvan` · CYCLONE AKVAN NEARS INDIA
+- 03 · Lead · `gta` · GTA VI ROLLOUT BEGINS
+- 04 · Brief · `crimea` · Crimean Bridge closure reported
+- 05 · Brief · `australia` · October jobless rate: 4.9%
+- 06 · Brief · `boj-ueda-testimony` · Ueda signals further hikes
+- 07 · Brief · `malaria-intervention-scenario` · Study models malaria rollback
+- 08 · Brief · `brent-0237-gmt` · Brent: $92.12 a barrel
+- 09 · Brief · `kumamoto` · Kumamoto quake: preliminary M5.7
+- 10 · Brief · `pacific-fiji-drug-baseline` · Fiji's first wastewater drug report
+- 11 · Brief · `tonga-new-emergency` · Tonga declares drought emergency
+- 12 · Brief · `nz-pay-equity-ruling` · NZ court faults pay-equity overhaul
 
-No item was added solely to fill a fixed count. Africa/Americas research did not yield a sufficiently strong additional candidate by this early cutoff, and that geographic gap is not concealed with an old or speculative story.
+The printed count is derived from the selected records. No blank story slot is published. Attribution, forecasts, preliminary measures and hypothetical model outputs are retained; headline compression is not permission to change them.

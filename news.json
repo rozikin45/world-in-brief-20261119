@@ -4,79 +4,276 @@
   "edition": "EARLY EDITION",
   "as_of_utc": "2026-11-19T04:00:00Z",
   "language": "en",
-  "coverage_note": "A verified morning snapshot, not a claim that the whole news day has finished.",
+  "coverage_note": "Source-checked early edition as of 04:00 UTC, not a complete day-end digest. Coverage is weighted toward Asia-Pacific at this early cutoff; no unsupported regional filler was added.",
   "stories": [
     {
       "id": "apec",
       "number": "01",
       "category": "DIPLOMACY",
       "location": "SHENZHEN",
-      "headline": ["TRUMP, XI", "& PUTIN", "AT APEC"],
-      "deck": ["Leaders appear together", "in the summit group photo."],
+      "headline": [
+        "TRUMP · XI · PUTIN",
+        "AT APEC"
+      ],
+      "deck": [
+        "Leaders appear together",
+        "in the summit group photo."
+      ],
       "verified_claim": "Trump, Xi and Putin appeared in the APEC leaders' group photo in Shenzhen on the morning of 19 November, China time.",
       "not_claimed": "No trilateral outcome, agreement, completed meeting or future event is asserted.",
       "date_basis": "Event on 19 November in Shenzhen, UTC+08:00; Reuters and independent video reporting appeared before the edition cutoff.",
-      "source_ids": [4, 14, 15]
-    },
-    {
-      "id": "crimea",
-      "number": "02",
-      "category": "RUSSIA–UKRAINE",
-      "location": "CRIMEAN BRIDGE",
-      "headline": ["CRIMEAN BRIDGE", "CLOSURE REPORTED"],
-      "deck": ["Russian-installed governor", "reports a temporary closure."],
-      "verified_claim": "Crimea's Russian-installed governor announced a temporary suspension of bridge traffic after an attack; the report remains attributed to that official.",
-      "not_claimed": "No independently confirmed perpetrator, new damage assessment or current reopening status is asserted.",
-      "date_basis": "Announcement at 01:35 UTC+03:00 on 19 November; also 00:35 in Kyiv. The UTC date was still 18 November.",
-      "source_ids": [8, 18, 19]
+      "source_ids": [
+        4,
+        15
+      ],
+      "image_headline": "TRUMP · XI · PUTIN AT APEC",
+      "image_brief": "Leaders appear together in the summit group photo in Shenzhen.",
+      "location_short": "SHENZHEN"
     },
     {
       "id": "akvan",
-      "number": "03",
+      "number": "02",
       "category": "BAY OF BENGAL",
       "location": "INDIA",
-      "headline": ["CYCLONE AKVAN", "NEARS INDIA"],
-      "deck": ["IMD warns coastal states;", "landfall forecast for 20 Nov."],
+      "headline": [
+        "CYCLONE AKVAN",
+        "NEARS INDIA"
+      ],
+      "deck": [
+        "IMD warns coastal states;",
+        "landfall forecast for 20 Nov."
+      ],
       "verified_claim": "India's weather agency tracked severe cyclonic storm Akvan northward in the Bay of Bengal in a 19 November observation and warned parts of the coast.",
       "not_claimed": "Landfall is explicitly a forecast, not an event that has already happened; no casualty or damage total is given.",
       "date_basis": "IMD observation at 02:30 IST and national bulletin issued at 05:30 IST on 19 November.",
-      "source_ids": [28, 29, 30]
-    },
-    {
-      "id": "australia",
-      "number": "04",
-      "category": "JOBS DATA",
-      "headline": ["4.9%"],
-      "label": "AUSTRALIA JOBLESS RATE",
-      "deck": ["October · released today"],
-      "verified_claim": "The ABS released the seasonally adjusted October unemployment rate of 4.9% on 19 November at 11:30 AEDT.",
-      "not_claimed": "The rate describes October data, not one day's layoffs; seasonally adjusted and trend rates are not mixed.",
-      "date_basis": "New official statistical release on 19 November at 11:30 AEDT, or 00:30 UTC.",
-      "source_ids": [24, 25, 26, 27]
+      "source_ids": [
+        28,
+        30
+      ],
+      "image_headline": "CYCLONE AKVAN NEARS INDIA",
+      "image_brief": "IMD warns coastal states; landfall remains a forecast for 20 Nov.",
+      "location_short": "INDIA"
     },
     {
       "id": "gta",
-      "number": "05",
+      "number": "03",
       "category": "CULTURE",
-      "headline": ["GTA VI"],
+      "headline": [
+        "GTA VI"
+      ],
       "label": "ROLLOUT BEGINS",
-      "deck": ["Digital, region by region"],
+      "deck": [
+        "Digital, region by region"
+      ],
       "verified_claim": "Regional digital access to Grand Theft Auto VI began at local midnight on 19 November, including New Zealand and India.",
       "not_claimed": "No claim is made that launch has finished worldwide, or that an exact sales or revenue total is confirmed.",
       "date_basis": "Observed access in New Zealand and India at local midnight on 19 November, supported by reporting beyond the previously announced schedule.",
-      "source_ids": [32, 33, 34]
+      "source_ids": [
+        33,
+        34
+      ],
+      "image_headline": "GTA VI ROLLOUT BEGINS",
+      "image_brief": "Digital access begins region by region; New Zealand and India are live.",
+      "location_short": "CULTURE"
+    },
+    {
+      "id": "crimea",
+      "number": "04",
+      "category": "RUSSIA–UKRAINE",
+      "location": "CRIMEAN BRIDGE",
+      "headline": [
+        "CRIMEAN BRIDGE",
+        "CLOSURE REPORTED"
+      ],
+      "deck": [
+        "Russian-installed governor",
+        "reports a temporary closure."
+      ],
+      "verified_claim": "Crimea's Russian-installed governor announced a temporary suspension of bridge traffic after an attack; the report remains attributed to that official.",
+      "not_claimed": "No independently confirmed perpetrator, new damage assessment or current reopening status is asserted.",
+      "date_basis": "Announcement at 01:35 UTC+03:00 on 19 November; also 00:35 in Kyiv. The UTC date was still 18 November.",
+      "source_ids": [
+        8,
+        18
+      ],
+      "image_headline": "Crimean Bridge closure reported",
+      "image_brief": "Russian-installed governor reports a temporary closure after an attack.",
+      "location_short": "CRIMEA"
+    },
+    {
+      "id": "australia",
+      "number": "05",
+      "category": "JOBS DATA",
+      "headline": [
+        "4.9%"
+      ],
+      "label": "AUSTRALIA JOBLESS RATE",
+      "deck": [
+        "October · released today"
+      ],
+      "verified_claim": "The ABS released the seasonally adjusted October unemployment rate of 4.9% on 19 November at 11:30 AEDT.",
+      "not_claimed": "The rate describes October data, not one day's layoffs; seasonally adjusted and trend rates are not mixed.",
+      "date_basis": "New official statistical release on 19 November at 11:30 AEDT, or 00:30 UTC.",
+      "source_ids": [
+        25,
+        27
+      ],
+      "image_headline": "October jobless rate: 4.9%",
+      "image_brief": "ABS released the seasonally adjusted October figure on 19 November.",
+      "location_short": "AUSTRALIA"
+    },
+    {
+      "id": "boj-ueda-testimony",
+      "category": "MONETARY POLICY",
+      "location_short": "JAPAN",
+      "headline": [
+        "Ueda signals more hikes"
+      ],
+      "deck": [
+        "Timing depends on economic and financial conditions."
+      ],
+      "image_headline": "Ueda signals further hikes",
+      "image_brief": "BoJ governor says timing and pace depend on economic and financial conditions.",
+      "verified_claim": "Ueda reiterated on 19 November that BOJ would keep raising rates in response to economic, price and financial conditions.",
+      "not_claimed": "No new interest-rate decision or fixed date for a future hike is asserted.",
+      "date_basis": "19 November JST testimony; Reuters first publication 01:33:52 UTC.",
+      "source_ids": [
+        35,
+        36
+      ],
+      "number": "06"
+    },
+    {
+      "id": "malaria-intervention-scenario",
+      "category": "HEALTH RESEARCH",
+      "location_short": "SUB-SAHARAN AFRICA",
+      "headline": [
+        "Study models malaria rollback"
+      ],
+      "deck": [
+        "A hypothetical low-intervention scenario, not observed cases."
+      ],
+      "image_headline": "Study models malaria rollback",
+      "image_brief": "Without major controls: 422m cases/year (275–582m), modelled—not observed.",
+      "verified_claim": "A Nature Communications study published 19 November estimates 422 million annual cases, range 275–582 million, under a hypothetical withdrawal of major interventions with other ecological/demographic conditions held constant.",
+      "not_claimed": "This is not a current case count, an unconditional forecast or evidence that interventions have already been withdrawn.",
+      "date_basis": "Journal publication 19 November; secondary report timestamp 03:00:29 UTC.",
+      "source_ids": [
+        37,
+        38
+      ],
+      "number": "07"
+    },
+    {
+      "id": "brent-0237-gmt",
+      "category": "ENERGY MARKETS",
+      "location_short": "OIL MARKETS",
+      "headline": [
+        "Brent: $92.12 a barrel"
+      ],
+      "deck": [
+        "Reuters quote, 02:37 GMT; intraday, not a closing price."
+      ],
+      "image_headline": "Brent: $92.12 a barrel",
+      "image_brief": "Reuters quote at 02:37 GMT; intraday, not a closing price.",
+      "verified_claim": "Reuters reported Brent futures at US$92.12 a barrel at 02:37 GMT on 19 November.",
+      "not_claimed": "No closing price or independently checked same-minute exchange quote is asserted.",
+      "date_basis": "Dated 19 November market snapshot, report published 03:05:52 UTC.",
+      "source_ids": [
+        7
+      ],
+      "number": "08"
     },
     {
       "id": "kumamoto",
-      "number": "06",
+      "number": "09",
       "category": "JAPAN",
-      "headline": ["M5.7"],
+      "headline": [
+        "M5.7"
+      ],
       "label": "KUMAMOTO QUAKE",
-      "deck": ["Preliminary · 02:22 JST"],
+      "deck": [
+        "Preliminary · 02:22 JST"
+      ],
       "verified_claim": "JMA recorded a new Kumamoto earthquake at 02:22 JST on 19 November with a preliminary magnitude of 5.7.",
       "not_claimed": "Magnitude is not confused with the separate Japanese intensity scale. No unverified casualty or damage count is asserted.",
       "date_basis": "New earthquake at 02:22 JST on 19 November, or 17:22 UTC on 18 November; the July earthquake in the same sequence is background, not today's event.",
-      "source_ids": [20, 21, 23]
+      "source_ids": [
+        20,
+        23
+      ],
+      "location_short": "JAPAN",
+      "image_headline": "Kumamoto quake: preliminary M5.7",
+      "image_brief": "JMA recorded the new tremor at 02:22 JST on 19 November."
+    },
+    {
+      "id": "pacific-fiji-drug-baseline",
+      "category": "PUBLIC HEALTH",
+      "location_short": "FIJI",
+      "headline": [
+        "Fiji's first wastewater drug report"
+      ],
+      "deck": [
+        "Meth detected at four sampled sites; not a national prevalence estimate."
+      ],
+      "image_headline": "Fiji's first wastewater drug report",
+      "image_brief": "Meth detected at four sampled sites; not a national prevalence estimate.",
+      "verified_claim": "Fiji released its first wastewater drug monitoring findings on 19 November; reports describe meth detected at all four sample sites.",
+      "not_claimed": "The sampling does not show a nationwide prevalence or count of individual users; the underlying programme did not begin today.",
+      "date_basis": "19 November FJT report release; two reports published 01:37:58 UTC and 02:00 UTC.",
+      "source_ids": [
+        39,
+        40
+      ],
+      "number": "10"
+    },
+    {
+      "id": "tonga-new-emergency",
+      "category": "DROUGHT",
+      "location_short": "TONGA",
+      "headline": [
+        "Tonga declares drought emergency"
+      ],
+      "deck": [
+        "Nationwide emergency starts 19 November as drought strains water supplies."
+      ],
+      "image_headline": "Tonga declares drought emergency",
+      "image_brief": "Nationwide emergency starts 19 November as drought strains water supplies.",
+      "verified_claim": "Tonga activated a nationwide drought-related state of emergency at 11:00 Tonga time on 19 November.",
+      "not_claimed": "The drought itself did not begin today; no unverified loss or completed aid-delivery total is asserted.",
+      "date_basis": "19 November in Tonga (UTC+13), corresponding to 18 November 22:00 UTC; new reports also dated 19 November.",
+      "source_ids": [
+        42,
+        43
+      ],
+      "number": "11"
+    },
+    {
+      "id": "nz-pay-equity-ruling",
+      "category": "COURT RULING",
+      "location_short": "NEW ZEALAND",
+      "headline": [
+        "NZ court faults pay-equity overhaul"
+      ],
+      "deck": [
+        "High Court finds sex discrimination; the law remains in force."
+      ],
+      "image_headline": "NZ court faults pay-equity overhaul",
+      "image_brief": "High Court finds sex discrimination; the law remains in force.",
+      "verified_claim": "The New Zealand High Court declared the pay-equity restrictions inconsistent with the Bill of Rights Act; reporting says the declaration does not revoke the law.",
+      "not_claimed": "No claim is made that legislation was struck down, claims automatically restored, or appeals exhausted. Original judgment text was not obtained.",
+      "date_basis": "Judgment reported released on 19 November NZDT; RNZ first publication 01:00:29 UTC.",
+      "source_ids": [
+        44,
+        46
+      ],
+      "number": "12"
     }
-  ]
+  ],
+  "lead_ids": [
+    "apec",
+    "akvan",
+    "gta"
+  ],
+  "selection_status": "final"
 }
