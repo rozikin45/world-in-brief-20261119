@@ -78,7 +78,7 @@ The primary judgment was not obtained. Selected independent coverage is RNZ plus
 
 The printed date uses the bounty’s any-timezone news day: Japanese and Tongan events can fall on 19 November locally while UTC is still 18 November. Event dates, first reports and later page updates were kept distinct. Wire syndications were not counted as independent confirmation of one another. The example supplied by the user informed density, not factual content.
 
-Headlines, layout and geometric illustrations are original. The public repository contains source links, not full news articles or private agent logs. Original artwork/code/editorial text use MIT; bundled Noto font files retain SIL OFL 1.1 in `fonts/NOTO-LICENSE.txt`.
+Headlines, layout and geometric illustrations are original. The public repository contains source links, not full news articles or private agent logs. Original artwork/code/editorial text use MIT. Font software is not distributed here; optional re-rendering uses separately installed Noto fonts under their own SIL OFL 1.1 terms.
 
 ## Sources
 

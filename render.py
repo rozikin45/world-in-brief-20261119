@@ -9,6 +9,7 @@ from __future__ import annotations
 import hashlib
 import json
 import math
+import os
 from functools import lru_cache
 from pathlib import Path
 
@@ -36,9 +37,29 @@ def px(value: float) -> int:
     return round(value * SCALE)
 
 
+def resolve_font_path(kind: str) -> Path:
+    """Find optional developer fonts without redistributing font software."""
+    filename = FONTS[kind]
+    explicit = os.environ.get("NEWS_FONT_DIR")
+    if explicit:
+        candidate = Path(explicit).expanduser() / filename
+        if candidate.is_file():
+            return candidate
+        raise FileNotFoundError("Noto development font missing from NEWS_FONT_DIR: " + filename)
+    directories = [Path("/usr/share/fonts/truetype/noto"),
+                   Path("/usr/local/share/fonts"), Path.home() / ".local/share/fonts",
+                   Path("/Library/Fonts"), Path.home() / "Library/Fonts",
+                   Path(os.environ.get("WINDIR", "C:/Windows")) / "Fonts"]
+    for directory in directories:
+        candidate = directory / filename
+        if candidate.is_file():
+            return candidate
+    raise FileNotFoundError("Install the Noto development fonts or set NEWS_FONT_DIR; missing " + filename)
+
+
 @lru_cache(maxsize=200)
 def font(kind: str, size: int) -> ImageFont.FreeTypeFont:
-    return ImageFont.truetype(str(ROOT / "fonts" / FONTS[kind]), px(size))
+    return ImageFont.truetype(str(resolve_font_path(kind)), px(size))
 
 
 class Poster:

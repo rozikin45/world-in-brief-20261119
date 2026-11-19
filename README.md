@@ -52,7 +52,7 @@ python3.13 -m unittest -v test_main
 With the development image library installed, run all runtime and layout contracts:
 
 ```sh
-python3 -m unittest -v test_main test_dense
+python3 -m unittest -v test_main test_dense test_fonts
 ```
 
 The tests check two byte-identical isolated executions, output format and caps, corrupt-chunk rejection, twelve in-bounds non-overlapping slots, and a gate against publishing an incomplete or provisional selection as final. Pixel-based visual review was unavailable; measured text bounds and actual OCR at 1024 and 300 pixels were used, not claimed as a human visual pass.
@@ -64,13 +64,15 @@ python3 -m pip install Pillow==11.1.0
 python3 render_dense.py
 ```
 
-Pillow is a **development-only** dependency. The final builder uses the committed fonts and `news.json` to write `entry.png`, `preview-300.png` and an ignored `entry.layout.json` QA report. `render.py` retains the earlier, less-dense design and shared drawing helpers; `render_dense.py` is the final twelve-story builder. A partial layout is allowed only with an explicit QA flag and cannot overwrite the publishable `entry.png`.
+Pillow and the Noto typefaces are **development-only** dependencies. Font software is not bundled: the submitted runtime only needs the fixed PNG. Install `NotoSans-Regular.ttf`, `NotoSans-SemiBold.ttf` and `NotoSerifDisplay-SemiCondensedExtraBold.ttf` through your operating system, or put them in an external directory and set `NEWS_FONT_DIR` to that directory. An explicitly configured directory fails clearly if a required font is missing; it is not silently substituted.
+
+The final builder uses those separately installed fonts and `news.json` to write `entry.png`, `preview-300.png` and an ignored `entry.layout.json` QA report. Optional re-rendering can vary with font/Pillow versions, while the competition runtime always emits the exact committed artwork. `render.py` retains earlier drawing helpers; `render_dense.py` is the final twelve-story builder. A partial layout is allowed only with an explicit QA flag and cannot overwrite the publishable `entry.png`.
 
 The public source includes original code, display copy and symbolic illustrations, not copied wire photographs, game screenshots, third-party poster art or private agent transcripts. See `design/analysis.md` and `prompts/infographic.md` for the public design brief. Large generated QA telemetry is intentionally not committed.
 
 ## Licenses
 
-Original code, artwork and editorial text: **MIT**. Noto font files remain **SIL Open Font License 1.1**; the required notice is in `fonts/NOTO-LICENSE.txt`. Source reporting is linked, not republished.
+Original code, artwork and editorial text: **MIT**. Font software is not distributed in this edition; separately installed Noto fonts retain their own **SIL Open Font License 1.1** terms and are not part of this MIT grant. Source reporting is linked, not republished.
 
 ---
 
